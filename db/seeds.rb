@@ -2,6 +2,7 @@ VideoGames.destroy_all
 Developers.destroy_all
 Customers.destroy_all
 
+puts "yeet"
 
 kenzo = Developers.create(:name=> 'Kenzo Tsujimoto')
 yoshiki = Developers.create(:name=> 'Yoshiki Okamoto')
