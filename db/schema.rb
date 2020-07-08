@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "location"
   end
 
-  create_table "video_games", force: :cascade do |t|
+  create_table "vgs", force: :cascade do |t|
     t.string "name"
     t.integer "publishyear"
     t.string "genre"

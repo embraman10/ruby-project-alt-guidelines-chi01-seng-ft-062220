@@ -1,7 +1,7 @@
 class CreateVideoGames < ActiveRecord::Migration[4.2]
 
   def change
-    create_table :video_games do |t|
+    create_table :vgs do |t|
         t.string :name
         t.integer :publishyear
         t.string :genre
