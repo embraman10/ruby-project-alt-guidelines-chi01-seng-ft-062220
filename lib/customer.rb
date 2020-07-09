@@ -1,7 +1,6 @@
 class Customer < ActiveRecord::Base
-    has_many :videogames   
-    has_many :developers, through: :videogames
-
+    has_many :vgs   
+    has_many :developers, through: :vgs
 
 
 end

@@ -7,5 +7,4 @@ class CreateDevelopers < ActiveRecord::Migration[4.2]
           t.string :location
         end
     end
-
 end
