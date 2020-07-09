@@ -41,15 +41,4 @@ class Customer < ActiveRecord::Base
     end
 
     #passing ^^
-
-
-
-    def self.ersb_by_age(age)
-        games = VG.all.map do |game|
-            game.ersb
-        end
-        games
-        binding.pry
-    end
-
 end

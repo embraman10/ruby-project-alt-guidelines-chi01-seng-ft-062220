@@ -2,7 +2,7 @@ VG.destroy_all
 Developer.destroy_all
 Customer.destroy_all
 
-
+#developers
 kenzo = Developer.create(:name=> 'Kenzo Tsujimoto', :company=> 'Capcom', :location=> 'Tokyo, Japan')
 yoshiki = Developer.create(:name=> 'Yoshiki Okamoto', :company=> 'Capcom', :location=> 'Tokyo, Japan')
 emily = Developer.create(:name=> 'Emily Braman', :company=> 'Nintendo', :location=> 'Kyoto, Japan')
@@ -16,6 +16,7 @@ seth = Developer.create(:name=> 'Seth Starr', :company=> 'Bungie', :location=> '
 pete = Developer.create(:name=> 'Pete Parsons', :company=> 'Bungie', :location=> 'Illinois, USA')
 jason = Developer.create(:name=> 'Jason Jones', :company=> 'Bungie', :location=> 'Illinois, USA')
 
+#customers
 george= Customer.create(:name=> 'George Smith', :age=> 13, :location=> 'USA')
 anna= Customer.create(:name=> 'Anna Kendrick', :age=> 24, :location=> 'USA')
 larz= Customer.create(:name=> 'Larz Barro', :age=> 24, :location=> 'CANADA')
@@ -28,6 +29,7 @@ harry= Customer.create(:name=> 'Harry Smith', :age=> 24, :location=> 'USA')
 miller= Customer.create(:name=> 'Miller Smith', :age=> 36, :location=> 'USA')
 lara= Customer.create(:name=> 'Lara Mallard', :age=> 15, :location=> 'U.K.')
 
+#video games
 kh3 = VG.create(:name=> 'Kingdom Hearts 3', :publishyear=> 2019, :genre=> 'Adventure', :platform=> 'Playstation 4', :ersb=> 'E', :developer_id=> kenzo.id, :customer_id=> george.id)
 kh3_1 = VG.create(:name=> 'Kingdom Hearts 3', :publishyear=> 2019, :genre=> 'Adventure', :platform=> 'Playstation 4', :ersb=> 'E', :developer_id=> kenzo.id, :customer_id=> mary.id)
 uncharted = VG.create(:name=> 'Uncharted 2', :publishyear=> 2008, :genre=> 'Action', :platform=> 'Playstation 3', :ersb=> 'T', :developer_id=> yoshiki.id, :customer_id=>george.id)
@@ -43,3 +45,18 @@ fifa = VG.create(:name=> 'Fifa', :publishyear=> 2012, :genre=> 'Sports', :platfo
 ban = VG.create(:name=> 'Batman Arkham Night', :publishyear=> 2011, :genre=> 'Adventure', :platform=> 'PC', :ersb=> 'M', :developer_id=> pete.id, :customer_id=>lara.id)
 splinter = VG.create(:name=> 'Splinter Cell', :publishyear=> 2010, :genre=> 'Action', :platform=> 'Playstation 2', :ersb=> 'M', :developer_id=> jason.id, :customer_id=>star.id)
 mine = VG.create(:name=> 'Minecraft', :publishyear=> 2010, :genre=> 'Adventure', :platform=> 'PC', :ersb=> 'E', :developer_id=> kenzo.id, :customer_id=>george.id)
+
+#user types in company
+#want to see all video games by company
+#(company)
+#Dev= Developer.all.select |comp|
+#comp.name = company
+#vg.all.select |id|
+#id.developer_id
+#.map name
+
+#grab dev with matching company name
+#collect ids of those developers
+#grab video games with matching dev ids
+#grab names of those video game instances
+#git rid of repeat names (uniq)
