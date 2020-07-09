@@ -29,6 +29,7 @@ miller= Customer.create(:name=> 'Miller Smith', :age=> 36, :location=> 'USA')
 lara= Customer.create(:name=> 'Lara Mallard', :age=> 15, :location=> 'U.K.')
 
 kh3 = VG.create(:name=> 'Kingdom Hearts 3', :publishyear=> 2019, :genre=> 'Adventure', :platform=> 'Playstation 4', :ersb=> 'E', :developer_id=> kenzo.id, :customer_id=> george.id)
+kh3_1 = VG.create(:name=> 'Kingdom Hearts 3', :publishyear=> 2019, :genre=> 'Adventure', :platform=> 'Playstation 4', :ersb=> 'E', :developer_id=> kenzo.id, :customer_id=> mary.id)
 uncharted = VG.create(:name=> 'Uncharted 2', :publishyear=> 2008, :genre=> 'Action', :platform=> 'Playstation 3', :ersb=> 'T', :developer_id=> yoshiki.id, :customer_id=>george.id)
 crash = VG.create(:name=> 'Crash Bandicoot', :publishyear=> 1995, :genre=> 'Adventure', :platform=> 'Playstation 1', :ersb=> 'E', :developer_id=> emily.id,:customer_id=> anna.id)
 need = VG.create(:name=> 'Need for Speed', :publishyear=> 2007, :genre=> 'Racing', :platform=> 'Xbox 360', :ersb=> 'E', :developer_id=> fusajiro.id, :customer_id=>larz.id)

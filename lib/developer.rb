@@ -26,16 +26,21 @@ class Developer < ActiveRecord::Base
     end
 
 
+    def self.dev_by_company(company)
+        companies = self.all.select do |dev|
+            dev.company == company
+        end
+        companies
+     end  
+
 #pass ^^
 
-    
-    def dev_by_company
-
-    end  
-
-
-    def games_by_company
-
+    def self.games_by_company(company)
+        developer = VG.all.map do |dev|
+            dev.developer_id
+        end
+        developer
+        binding.pry
     end
 
 
