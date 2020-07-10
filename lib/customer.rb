@@ -1,18 +1,18 @@
 class Customer < ActiveRecord::Base
-    has_many :videogames   
-    has_many :developers, through: :videogames
+    has_many :video_games   
+    has_many :developers, through: :video_games
 
  
 
     def self.most_popular_platform
-        pop = VideoGame.all.max_by do |p|
+        pop= VideoGame.all.max_by do |p|
             p.platform == self
         end
         pop.platform
     end
 
     def self.top_selling_game
-        pop = VideoGame.all.max_by do |n|
+        pop= VideoGame.all.max_by do |n|
             n.name == self
         end
         pop.name
@@ -33,9 +33,9 @@ class Customer < ActiveRecord::Base
     end
 
 
-    def self.ersb_by_rating(rate)
+    def self.esrb_by_rating(rate)
         rates = VideoGame.all.select do |game|
-            game.ersb == rate
+            game.esrb == rate
         end
         rates
     end

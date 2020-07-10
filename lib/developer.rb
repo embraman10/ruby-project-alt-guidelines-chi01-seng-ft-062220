@@ -1,6 +1,6 @@
 class Developer < ActiveRecord::Base
-    has_many :vgs
-    has_many :customers, through: :vgs
+    has_many :video_games
+    has_many :customers, through: :video_games
     
 
     def self.most_popular_developer
@@ -45,7 +45,7 @@ class Developer < ActiveRecord::Base
             dev.id
         end
         #grab video games with matching dev ids
-        match = VG.all.select do |vg|
+        match = VideoGame.all.select do |vg|
             ids.include?(vg.developer_id)
         end
         #grab names of those video game instances
