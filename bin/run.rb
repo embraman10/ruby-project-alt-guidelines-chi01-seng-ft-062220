@@ -1,8 +1,7 @@
 require_relative '../config/environment'
 require 'pry'
 ActiveRecord::Base.logger = nil
-# PROMPT = TTY::Prompt.new
-Customer.most_popular_platform
+
 def first_prompt
     prompt = TTY::Prompt.new
     system("clear")
