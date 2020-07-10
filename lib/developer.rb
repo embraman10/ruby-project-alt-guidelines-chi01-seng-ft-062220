@@ -31,7 +31,7 @@ class Developer < ActiveRecord::Base
 
 
     def self.dev_by_company(company)
-        companies = self.all.select do |dev|
+        self.all.select do |dev|
             dev.company == company
         end
      end  

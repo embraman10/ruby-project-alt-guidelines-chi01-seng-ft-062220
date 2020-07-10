@@ -29,15 +29,19 @@ class Customer < ActiveRecord::Base
         genres = VideoGame.all.select do |game|
             game.genre == genre
         end
-        genres
+        genres.map do |n|
+            n.name
+        end 
     end
 
 
     def self.esrb_by_rating(rate)
         rates = VideoGame.all.select do |game|
-            game.esrb == rate
+            game.ersb == rate
         end
-        rates
+        rates.map do |r|
+            r.name
+        end
     end
 
     #passing ^^
